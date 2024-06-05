@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tech Club Membership Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+        }
+        
+        .radio-group label {
+            width: auto;
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br>
+        <label for="about">Tell us about yourself:</label><br>
+        <textarea id="about" name="about" required></textarea><br>
+        <label for="achievements">Achievements:</label><br>
+        <textarea id="achievements" name="achievements" required></textarea><br>
+        <label for="grade">Grade:</label><br>
+        <select id="grade" name="grade" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select><br>
+        <label>Would you like to receive notifications?</label><br>
+        <input type="radio" id="yes" name="notifications" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="notifications" value="no">
+        <label for="no">No</label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
